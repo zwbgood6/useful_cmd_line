@@ -40,9 +40,19 @@ step 4： Push the changes in your local repository to GitHub.
 
 ## Clone:
 
+- no clone button
+
 If there is no `git clone` button in github repo, i.e.,`https://github.com/tensorflow/models/tree/master/research/efficient-hrl`, we can run
 
 `svn export https://github.com/tensorflow/models/trunk/research/efficient-hrl` (replace `/tree/master` with `/trunk`)
+
+- clone a branch
+
+`git clone https://github.com/keyshor/sarl.git -b [branch name] [folder name on your local machine]`
+
+e.g.
+
+`git clone https://github.com/keyshor/sarl.git -b baseline sarl`
 
 ## Build python from source
 
