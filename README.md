@@ -58,3 +58,34 @@ e.g.
 
 https://stackoverflow.com/questions/41328451/ssl-module-in-python-is-not-available-when-installing-package-with-pip3
 
+## tensorflow
+
+### tensorboard
+
+If we train the code on the server and we want to visualize it locally, then
+
+- from your **local** machine, run
+
+`ssh -N -f -L localhost:16006:localhost:6006 <user@remote>` (e.g. `<user@remote>` can be `wenbo@ash01.seas.upenn.edu`)
+
+- on the **remote** machine, run
+
+`tensorboard --logdir <path> --port 6006` (e.g. `<path>` is where your *checkpoint* files are located)
+
+- on the **local** machine, navigate to http://localhost:16006
+
+**Attention**: 
+
+- If it shows *ERROR: TensorBoard could not bind to port 6006, it was already in use* remotely, then run
+
+`lsof -ti:xxxx | xargs kill -9` (e.g. `xxxx` can be `6006`, it kills the current occupied port)
+
+- When run `tensorboard --logdir <path> --port 6006`, it might show http://ash01:6006/. Do not use this link, **try** http://localhost:6006/
+
+**Explanation** of ssh command:
+
+`-N`: no remote commands
+
+`-f`: put ssh in the background
+
+`-L <machine1>:<portA>:<machine2>:<portB>`: forward `<machine2>:<portB>` (remote scope) to `<machine1>:<portA>` (local scope) 
