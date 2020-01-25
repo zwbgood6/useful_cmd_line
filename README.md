@@ -80,7 +80,7 @@ If we train the code on the server and we want to visualize it locally, then
 
 `lsof -ti:xxxx | xargs kill -9` (e.g. `xxxx` can be `6006`, it kills the current occupied port)
 
-- When run `tensorboard --logdir <path> --port 6006`, it might show http://ash01:6006/. Do not use this link, **try** http://localhost:6006/
+- When run `tensorboard --logdir <path> --port 6006`, it might show http://ash01:6006/. Do not use this link, **try** http://localhost:16006
 
 **Explanation** of ssh command:
 
