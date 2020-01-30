@@ -89,3 +89,34 @@ If we train the code on the server and we want to visualize it locally, then
 `-f`: put ssh in the background
 
 `-L <machine1>:<portA>:<machine2>:<portB>`: forward `<machine2>:<portB>` (remote scope) to `<machine1>:<portA>` (local scope) 
+
+
+## Python Error
+
+- Assertion error:
+
+Usage: If the cmd does not meet the requirement, it will raise AssertionError. It can be used to debug the code.
+
+e.g.
+```
+for i, all_steps in enumerate(all_steps_per_key):
+        assert len(set(all_steps)) == 1, "For scalar {} the step numbering or count doesn't match. Step count for all runs: {}".format(keys[i], [len(steps) for steps in all_steps])
+```
+
+If assert len(set(all_steps)) == 1 is not true, then it will raise
+
+```
+AssertionError: For scalar Counters/environment_steps the step numbering or count doesn't match. Step count for all runs: [10000, 10000, 10000, 10000, 10000]
+```
+
+- Exception 
+
+Usage: It can also be used to debug the code
+
+e.g.
+```
+If maze_id == 'Maze':
+  a = 1
+else:
+  raise Exception("Check Maze ID!")
+```
