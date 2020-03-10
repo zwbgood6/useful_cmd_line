@@ -2,6 +2,12 @@
 
 ## GitHub command line
 
+**If you pull files from master when someone update them**
+
+`git pull origin master`, or
+
+`git pull file/location/test.py`
+
 **If you push files to master**
 
 step1: Stage the file for commit to your local repository.
