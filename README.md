@@ -60,6 +60,12 @@ e.g.
 
 `git clone https://github.com/keyshor/sarl.git -b baseline sarl`
 
+### windows clone
+
+If it's a private repo, use
+
+`git clone https://GIT_USER_NAME:GIT_PASSWORD@github.com/some_path/some_repo.git`
+
 ## Build python from source
 
 https://stackoverflow.com/questions/41328451/ssl-module-in-python-is-not-available-when-installing-package-with-pip3
