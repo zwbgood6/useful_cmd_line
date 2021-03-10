@@ -30,7 +30,7 @@ assume you already have a remote branch named "baseline"
 
 step 1: Clone a remote branch and switch to it
 
-`git checkout -b [branch name] origin/[branch name]`
+`git checkout -b baseline`
 
 step 2: Stage the file for commit to your local repository.
 
@@ -38,11 +38,11 @@ step 2: Stage the file for commit to your local repository.
 
 step 3: Commit the file that you've staged in your local repository.
 
-`git commit -m "update file A"`
+`git commit -m "update file baseline"`
 
 step 4： Push the changes in your local repository to GitHub. 
 
-`git push origin HEAD:<name-of-remote-branch>` (e.g. `git push origin HEAD:baseline`)
+`git push --set-upstream origin baseline`
 
 ## Clone:
 
