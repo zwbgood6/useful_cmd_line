@@ -132,3 +132,21 @@ If maze_id == 'Maze':
 else:
   raise Exception("Check Maze ID!")
 ```
+
+
+## head/tail
+
+'head log.txt' prints the first 10 lines of the specified files.
+
+'tail log.txt' prints the last 10 lines of the specified files.
+
+'head -5 log.txt' prints the first 5 lines of the log.txt
+
+
+## write the terminal output in the log file
+```
+bash -c 'cd ./acquisition_path/bin; ./capture_image_sim >> ~/Desktop/log.txt'
+```
+Here we run two command lines in the bash file: `cd ./acquisition_path/bin` and `./capture_image_sim`. We need to add `;` between two command lines. 
+
+Then when we write the terminal output to the log files, we use `>> ~/Desktop/log.txt`.
