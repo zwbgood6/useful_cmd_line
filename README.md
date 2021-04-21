@@ -150,3 +150,13 @@ bash -c 'cd ./acquisition_path/bin; ./capture_image_sim >> ~/Desktop/log.txt'
 Here we run two command lines in the bash file: `cd ./acquisition_path/bin` and `./capture_image_sim`. We need to add `;` between two command lines. 
 
 Then when we write the terminal output to the log files, we use `>> ~/Desktop/log.txt`.
+
+
+## nohup
+
+This command's name is no hangup. We can use this to run the program in the background.
+
+```
+gnome-terminal -e "bash -c 'cd $acquisition_path/bin; nohup ./$acquisition_binary $acquisition_args >> ~/Desktop/logs/log_acq.txt'"
+```
+`nohup` can run the binary in the background. `>> ./log.txt` can save the output to the text file.
