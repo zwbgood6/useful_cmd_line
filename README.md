@@ -167,3 +167,13 @@ gnome-terminal -e "bash -c 'cd $acquisition_path/bin; nohup ./$acquisition_binar
 cd /var/log
 cat syslog | grep error
 ```
+
+
+## get the ip address 
+`lsconfig`
+
+## copy files from local pc to remote pc after getting the ip address
+`scp -r local_file username@ip_address:/home/to/file/`
+
+e.g.,
+`scp -r record greyscale@111.111.1:/home/document/`
